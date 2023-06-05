@@ -20,7 +20,7 @@ Concepts
 -   [Python Interpreter](https://intranet.alxswe.com/rltoken/a5z3uSkiby1Xw679cFiw1Q)
 -   [Python bytecode](https://intranet.alxswe.com/rltoken/oJ2v8bVCLZmAowJ7WXLzJg)
 
-![](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/231/48a9fdbd67c84a328a9df9e    c8d93b9ac2458ac37721d7d53e51a27fb2bdc5263.jpg)
+![](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/231/48a9fdbd67c84a328a9df9ec8d93b9ac2458ac37721d7d53e51a27fb2bdc5263.jpg)
 
 Author's disclaimer
 -------------------
