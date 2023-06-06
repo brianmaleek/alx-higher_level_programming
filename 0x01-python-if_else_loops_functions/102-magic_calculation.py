@@ -7,5 +7,5 @@ def magic_calculation(a, b, c):
     else:
         return (a * b) - c
 
-#import dis
-#print(dis.dis(magic_calculation))
+# import dis
+# print(dis.dis(magic_calculation))
