@@ -7,7 +7,7 @@ class TooFarException(Exception):
 def magic_calculation(a, b):
     result = 0
 
-    for i in range(1, 4):
+    for i in range(1, 3):
         try:
             if i > a:
                 raise TooFarException("Too far")
