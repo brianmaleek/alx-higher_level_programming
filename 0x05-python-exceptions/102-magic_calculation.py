@@ -1,15 +1,19 @@
 #!/usr/bin/python3
 
+class TooFarException(Exception):
+    pass
+
+
 def magic_calculation(a, b):
     result = 0
 
     for i in range(1, 4):
         try:
             if i > a:
-                raise Exception("Too far")
+                raise TooFarException("Too far")
             else:
                 result += (a ** b) / i
-        except Exception as error:
+        except TooFarException:
             result = b + a
             break
     return result
