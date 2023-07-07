@@ -87,3 +87,4 @@ Test NaN in Python (not a number):
      Traceback (most recent call last):
      ...
      ValueError: cannot convert float NaN to integer
+     
