@@ -1,0 +1,98 @@
+The 7-base_geometry module
+==========================
+
+# run test with python3 -m doctest -v ./tests/*.txt
+
+Using 7-base_geometry
+=====================
+
+import functions from module:
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Success case:
+
+Test ints greater than 0:
+Example 1:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("my_int", 12)
+
+Example 2:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("width", 89)
+
+Failure cases:
+
+Test non-ints:
+Example 3:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", "John")
+    Traceback (most recent call last):
+    ValueError: name must be an integer
+
+Example 4 test for string None:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("check", None)
+    Traceback (most recent call last):
+    ValueError: check must be an integer
+
+Example 5 test for string: 
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("check", "4.5")
+    Traceback (most recent call last):
+    ValueError: check must be an integer
+
+Example 6 test for list:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("check", [4, 5])
+    Traceback (most recent call last):
+    ValueError: check must be an integer
+
+Example 7 test for tuple:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("check", (4, 5))
+    Traceback (most recent call last):
+    ValueError: check must be an integer
+
+Example 8 test for dict:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("check", {"key": 5})
+    Traceback (most recent call last):
+    ValueError: check must be an integer
+
+Example 9 test for set:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("check", {6,7})
+    Traceback (most recent call last):
+    ValueError: check must be an integer
+
+Test ints less than or equal to 0:
+Example 10 test for 0:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("age", 0)
+    Traceback (most recent call last):
+    ValueError: age must be greater than 0
+
+Example 11 test for negative number:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("distance", -4)
+    Traceback (most recent call last):
+    ValueError: distance must be greater than 0
+
+Test invalid number of arguments:
+Example 12 test for one argument:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("age")
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Example 13 test for three arguments:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("age", 4, 5)
+    Traceback (most recent call last):
+    TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+Example 14 test for no arguments:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
