@@ -1,17 +1,15 @@
 #!/usr/bin/python3
 """
-contains method inherits_from
-returns True if the object is an instance of a class that inherited
-from the specified class
+defines an inherited class
 """
 
 
 def inherits_from(obj, a_class):
     """
-    use issubclass() to check if obj is an instance of a class
+    use issubclass() to check if obj is an instance of a_class
     that inherited from the specified class
     Returns:
-        True if the object is an instance of a#-class
+        True if the object is an instance of a_class
         False if the object is not an instance of a_class
     """
     if issubclass(type(obj), a_class) and type(obj) != a_class:
