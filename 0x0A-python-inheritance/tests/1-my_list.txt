@@ -1,15 +1,12 @@
-The 1-my_list
-===================
 # run test with python3 -m doctest -v ./tests/*.txt
 
 Using 1-my_list
 ===============
 
 import functions from module:
->>> Mylist = __import__('1-my_list').MyList
+        >>> Mylist = __import__('1-my_list').MyList
 
 Succes case:
-=============
 
 Test ints Example 1:
     >>> my_list = Mylist()
