@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 Module contains class Rectangle
 inherits from Base
@@ -15,7 +14,6 @@ class Rectangle(Base):
     """
     def __init__(self, width, height, x=0, y=0, id=None):
         """
-        initialize instance of Rectangle
         Constructor method
         Attributes:
             width: private instance attribute
@@ -42,10 +40,7 @@ class Rectangle(Base):
         """
         setter for width
         """
-        if type(value) is not int:
-            raise TypeError("width must be an integer")
-        if value <= 0:
-            raise ValueError("width must be >=0")
+        self.validate_value("width", value, False)
         self.__width = value
 
     @property
@@ -60,10 +55,7 @@ class Rectangle(Base):
         """
         setter for height
         """
-        if type(value) is not int:
-            raise TypeError("height must be an integer")
-        if value <= 0:
-            raise ValueError("height must be >=0")
+        self.validate_value("height", value, False)
         self.__height = value
 
     @property
@@ -78,10 +70,7 @@ class Rectangle(Base):
         """
         setter for x
         """
-        if type(value) is not int:
-            raise TypeError("x must be an integer")
-        if value <= 0:
-            raise ValueError("x must be >=0")
+        self.validate_value("x", value)
         self.__x = value
 
     @property
@@ -96,8 +85,16 @@ class Rectangle(Base):
         """
         setter for y
         """
-        if type(value) is not int:
-            raise TypeError("y must be an integer")
-        if value <= 0:
-            raise ValueError("y must be >=0")
+        self.validate_value("y", value)
         self.__y = value
+
+    def validate_value(self, name, value, eq=True):
+        """
+        validate value
+        """
+        if type(value) is not int:
+            raise TypeError("{} must be an integer".format(name))
+        elif eq and value < 0:
+            raise ValueError("{} must be >= 0".format(name))
+        elif not eq and value <= 0:
+            raise ValueError("{} must be > 0".format(name))
