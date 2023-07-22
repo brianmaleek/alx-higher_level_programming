@@ -9,6 +9,7 @@ contains:
 
 
 import json
+import csv
 
 
 class Base():
@@ -90,6 +91,41 @@ class Base():
                 instances = []
                 for obj in objs:
                     instances.append(cls.create(**obj))
+                return instances
+        except:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        '''
+        saves object to csv file
+        '''
+        filename = cls.__name__ + ".csv"
+        with open(filename, "w") as f:
+            if cls.__name__ == "Rectangle":
+                fieldnames = ["id", "width", "height", "x", "y"]
+            elif cls.__name__ == "Square":
+                fieldnames = ["id", "size", "x", "y"]
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            if list_objs is not None:
+                for obj in list_objs:
+                    writer.writerow(cls.to_dictionary(obj))
+
+    @classmethod
+    def load_from_file_csv(cls):
+        '''
+        loads object from csv file
+        '''
+        filename = cls.__name__ + ".csv"
+        try:
+            with open(filename, "r") as f:
+                reader = csv.DictReader(f)
+                instances = []
+                for row in reader:
+                    for key, value in row.items():
+                        row[key] = int(value)
+                    instances.append(cls.create(**row))
                 return instances
         except:
             return []
