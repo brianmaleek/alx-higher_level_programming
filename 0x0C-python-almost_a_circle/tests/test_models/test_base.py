@@ -406,6 +406,7 @@ class TestBase_save_to_file_csv(unittest.TestCase):
         except IOError:
             pass
 
+
 class TestBase_load_from_file_csv(unittest.TestCase):
     """Unittests for testing load_from_file_csv method of Base class."""
 
@@ -420,6 +421,7 @@ class TestBase_load_from_file_csv(unittest.TestCase):
             os.remove("Square.csv")
         except IOError:
             pass
+
 
 if __name__ == "__main__":
     unittest.main()

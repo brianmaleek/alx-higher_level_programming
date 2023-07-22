@@ -207,5 +207,6 @@ class TestSquare(unittest.TestCase):
         with open("Square.json", "r") as file:
             self.assertEqual(file.read(), '[]')
 
+
 if __name__ == '__main__':
     unittest.main()

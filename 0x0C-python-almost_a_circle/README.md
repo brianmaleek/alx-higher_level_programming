@@ -75,3 +75,7 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 
 ## Tasks
 
+### 0. If it's not tested it doesn't work
+
+
+

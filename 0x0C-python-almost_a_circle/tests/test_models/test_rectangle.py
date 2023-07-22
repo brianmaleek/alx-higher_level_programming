@@ -40,7 +40,10 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(new2.y, 4)
 
     def test_equality(self):
-        """Test that two rectangles with the same values are not the same object"""
+        """
+        Test that two rectangles with the
+        same values are not the same object
+        """
         new3 = Rectangle(1, 1, 1, 1)
         new4 = Rectangle(1, 1, 1, 1)
         self.assertFalse(new3 is new4)

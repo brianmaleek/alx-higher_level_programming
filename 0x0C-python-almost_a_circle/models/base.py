@@ -92,7 +92,7 @@ class Base():
                 for obj in objs:
                     instances.append(cls.create(**obj))
                 return instances
-        except:
+        except Exception as e:
             return []
 
     @classmethod
@@ -127,5 +127,5 @@ class Base():
                         row[key] = int(value)
                     instances.append(cls.create(**row))
                 return instances
-        except:
+        except Exception as e:
             return []
