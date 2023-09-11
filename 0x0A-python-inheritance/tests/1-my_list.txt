@@ -17,10 +17,6 @@ Test ints Example 1:
     >>> my_list.append(5)
     >>> print(my_list)
     [1, 4, 2, 3, 5]
-    >>> my_list.print_sorted()
-    [1, 2, 3, 4, 5]
-    >>> print(my_list)
-    [1, 4, 2, 3, 5]
 
 Test ints Example 2:
     >>> my_list = Mylist()
@@ -33,8 +29,6 @@ Test ints Example 2:
     [6, 7, 100, 9, 8]
     >>> my_list.print_sorted()
     [6, 7, 8, 9, 100]
-    >>> print(my_list)
-    [6, 7, 100, 9, 8]
 
 Test Negative ints:
     >>> my_list = Mylist()
@@ -47,10 +41,8 @@ Test Negative ints:
     [-1, -4, -2, -3, -5]
     >>> my_list.print_sorted()
     [-5, -4, -3, -2, -1]
-    >>> print(my_list)
-    [-1, -4, -2, -3, -5]
 
-Normal list:
+Test Normal list:
     >>> my_list = Mylist[1, 2, 3, 4]
     >>> my_list.print_sorted()
     [1, 2, 3, 4]
@@ -59,6 +51,18 @@ Empty list:
     >>> my_list = Mylist()
     >>> my_list.print_sorted()
     []
+
+Original list unchanged:
+    >>> my_list = Mylist([1, 4, 2, 3, 5])
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+    >>> my_list
+    [1, 4, 2, 3, 5]
+
+List already sorted:
+    >>> my_list = Mylist([1, 2, 3, 4, 5])
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
 
 Correct Class Type test:
     >>> my_list = Mylist()
@@ -71,14 +75,13 @@ Correct Instance Type test:
     True
 
     >>> isinstance(my_list, list)
-    False
+    True
 
     >>> issubclass(my_list, list)
     True
 
 print_sorted method is an instance method:
-    >>> my_list = Mylist()
-    >>> type(my_list.__dict__['print_sorted'])
+    >>> type(MyList.__dict__['print_sorted'])
     <class 'function'>
 
 print_sorted method with 0 argument:

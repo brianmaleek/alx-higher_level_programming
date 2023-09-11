@@ -1,0 +1,25 @@
+The ``1-my_list`` module
+============================
+
+Using ``1-mylist``
+---------------------
+
+Import function from module:
+    	>>> MyList = __import__('1-my_list').MyList
+
+
+
+
+
+
+Original list unchanged:
+    	>>> ml = MyList([2, 10, 1, -10, 20, 100, 0])
+    	>>> ml.print_sorted()
+    	[-10, 0, 1, 2, 10, 20, 100]
+    	>>> ml
+    	[2, 10, 1, -10, 20, 100, 0]
+
+List already in order:
+	>>> ml = MyList([-20, -10, 0, 10, 20])
+	>>> ml.print_sorted()
+	[-20, -10, 0, 10, 20]
