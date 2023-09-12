@@ -2,10 +2,10 @@
 
 // class square that defines a square and
 // inherits from Rectangle of 4-rectangle.js
-const Rectangle = require('./4-rectangle');
+const BaseSquare = require('./5-square');
 
 // class Square inherits from Rectangle
-class Square extends Rectangle {
+class Square extends BaseSquare {
   constructor (size) {
     super(size, size);
   }
