@@ -1,4 +1,4 @@
-#!/usr/bin/n
+#!/usr/bin/node
 
 // This function increments and calls the function passed to it.
 function addMeMaybe (number, theFunction) {
