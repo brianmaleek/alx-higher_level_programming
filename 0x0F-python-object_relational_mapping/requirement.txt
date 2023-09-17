@@ -1,0 +1,7 @@
+greenlet==2.0.2
+mysql-connector-python==8.1.0
+mysqlclient==2.2.0
+protobuf==4.21.12
+pycodestyle==2.11.0
+SQLAlchemy==2.0.20
+typing_extensions==4.7.1
