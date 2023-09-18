@@ -30,7 +30,7 @@ if __name__ == "__main__":
                 WHERE states.name LIKE %s\
                 ORDER BY cities.id ASC"
 
-    cursor.execute(sql_query, (argv[4],))
+    cursor.execute(sql_query, (argv[4], ))
     cities = cursor.fetchall()
 
     # format the printing of cities of same state separated by commas
