@@ -25,7 +25,7 @@ if __name__ == "__main__":
 
     # Define the SQL query to be executed
     sql_query = "SELECT cities.id, cities.name, states.name\
-                FROM states JOIN cities ON states.id = cities.states_id\
+                FROM states INNER JOIN cities ON states.id = cities.states_id\
                 ORDER BY cities.id ASC"
     cursor.execute(sql_query)
     states = cursor.fetchall()
