@@ -25,11 +25,14 @@ if __name__ == "__main__":
 
     # Define the SQL query to be executed
     sql_query = "SELECT cities.id, cities.name, states.name\
-                FROM cities JOIN states ON cities.states.id = states_id\
+                FROM states\
+                JOIN cities ON states.id = cities.state_id\
                 ORDER BY cities.id ASC"
+
     cursor.execute(sql_query)
     states = cursor.fetchall()
 
+    # print results (states)
     for state in states:
         print(state)
 
