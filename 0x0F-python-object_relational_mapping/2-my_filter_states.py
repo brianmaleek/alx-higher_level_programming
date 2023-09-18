@@ -24,8 +24,8 @@ if __name__ == "__main__":
 
     # prepare a cursor object using cursor() method
     cursor = db.cursor()
-    
-    # Define the SQL query to be executed 
+
+    # Define the SQL query to be executed
     sql_query = "SELECT * FROM states WHERE name LIKE '{}'\
                 ORDER BY id ASC".format(argv[4])
     cursor.execute(sql_query)
