@@ -9,7 +9,6 @@ from sqlalchemy.orm import relationship
 from relationship_city import City, Base
 
 
-
 class State(Base):
     """
     Defines a State class.
