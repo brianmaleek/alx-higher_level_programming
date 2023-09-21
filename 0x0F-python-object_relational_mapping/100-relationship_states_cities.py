@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/python3
 
 """
 1. script creates the State “California” with the City “San Francisco”
