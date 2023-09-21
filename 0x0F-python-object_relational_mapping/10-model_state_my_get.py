@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     # check correct no. of command line args are provided
     if len(argv) != 5:
-        print("Usage: 9-model_state_filter_a.py <mysql_username> \
+        print("Usage: 10-model_state_my_get.py <mysql_username> \
               <mysql_password> <database_name> <state name>")
         exit(1)
 
