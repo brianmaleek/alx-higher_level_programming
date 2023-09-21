@@ -26,15 +26,15 @@ if __name__ == "__main__":
 
     # Define the SQL query to be executed
     sql_query = "SELECT cities.name FROM cities\
-                JOIN states ON cities.state_id = state.id\
-                WHERE states.name LIKE %s\
-                ORDER BY cities.id ASC"
+                JOIN states ON cities.state_id = states.id\
+                WHERE states.name = %s\
+                ORDER BY states.id ASC"
 
     cursor.execute(sql_query, (argv[4], ))
     cities = cursor.fetchall()
 
     # format the printing of cities of same state separated by commas
-    city_names = [city[0] for city in cities]
+    city_names = list(city[0] for city in cities)
     print(', '.join(city_names))
 
     # disconnect from server
