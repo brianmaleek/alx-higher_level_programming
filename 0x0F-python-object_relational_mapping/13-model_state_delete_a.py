@@ -19,7 +19,7 @@ if __name__ == "__main__":
     # check correct no. of command line args are provided
     if len(argv) != 4:
         print("Usage: 13-model_state_delete_a.py <mysql_username> \
-              <mysql_password> <database_name> <state name>")
+              <mysql_password> <database_name>")
         exit(1)
 
     # create engine to access database
