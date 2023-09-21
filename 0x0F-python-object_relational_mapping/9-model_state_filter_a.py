@@ -32,7 +32,7 @@ if __name__ == "__main__":
     session = Session()
 
     # retrieve state objects containing letter 'a' and order by state.id
-    sql_query = session.query(State).filter(State.name.like('%a'))
+    sql_query = session.query(State).filter(State.name.contains('%a'))
     matching_state = sql_query.order_by(State.id).all()
 
     # print first State object if it exists
