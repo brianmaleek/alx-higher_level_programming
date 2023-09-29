@@ -12,6 +12,7 @@ import urllib.request
 
 if __name__ == "__main__":
     url = 'https://intranet.hbtn.io/status'
+
     try:
         with urllib.request.urlopen(url) as response:
             data_content = response.read()
