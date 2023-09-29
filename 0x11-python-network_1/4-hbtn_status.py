@@ -10,6 +10,7 @@
 
 import requests
 
+
 if __name__ == "__main__":
     url = 'https://intranet.hbtn.io/status'
     # send request to URL
