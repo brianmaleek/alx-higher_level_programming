@@ -30,7 +30,7 @@ if __name__ == "__main__":
         with request.urlopen(url, data) as response:
             body = response.read()
             body_decode = body.decode('utf-8')
-            print("Your email is: {}".format(body_decode))
+            print(body_decode)
     except request.HTTPError as e:
         # Handle HTTPError errors
         print('Error code: {}'.format(e.code))
