@@ -4,8 +4,6 @@
 1. Python script fetches https://alx-intranet.hbtn.io/status
 2. Must use the package requests
 3. Only import requests package
-4. Body response must be display like the following example
-    (tabulation before -)
 """
 
 import requests
