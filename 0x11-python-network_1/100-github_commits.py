@@ -26,7 +26,7 @@ repo_name, owner_name = sys.argv[1], sys.argv[2]
 
 # set url for the GitHub API
 url = 'https://api.github.com/repos/{}/{}/commits'.\
-    format(owner_name, repo_name)
+    format(repo_name, owner_name)
 
 try:
     response = requests.get(url)
