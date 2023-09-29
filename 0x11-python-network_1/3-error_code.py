@@ -15,8 +15,8 @@ from urllib import request, error
 import sys
 
 if __name__ == "__main__":
-    if len(sys.argv) != 1:
-        print('Usage: 3-error_code.py <URL>')
+    if len(sys.argv) != 2:
+        print("Usage: 3-error_code.py <URL>")
         sys.exit(1)
 
     url = sys.argv[1]
@@ -25,11 +25,11 @@ if __name__ == "__main__":
         # send request to URL with data
         with request.urlopen(url) as response:
             html_body = response.read()
-            decode_html_body = html_body.decode('utf-8')
+            decode_html_body = html_body.decode("utf-8")
             print(decode_html_body)
     except error.HTTPError as e:
         # Handle HTTPError errors
-        print('Error code: {}'.format(e.code))
+        print("Error code: {}".format(e.code))
     except Exception as e:
         # Handle all other errors
         print("An error occurred: {}".format(e))
