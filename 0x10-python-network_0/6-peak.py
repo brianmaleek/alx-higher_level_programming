@@ -11,20 +11,19 @@ function finds a peak in a list of unsorted integers.
 
 
 def find_peak(list_of_integers):
+    # Edge case: if the list is empty, there is no peak.
     if not list_of_integers:
         return None
 
-    # lo - lower bound starting index
-    # hi - upper bound starting index
-    # mid - middle index
-    lo, hi = 0, len(list_of_integers) - 1
+    left = 0
+    right = len(list_of_integers) - 1
 
-    while lo < hi:
-        mid = (lo + hi) // 2
+    while left < right:
+        mid = left + (right - left) // 2
 
         if list_of_integers[mid] < list_of_integers[mid + 1]:
-            lo = mid + 1
+            left = mid + 1
         else:
-            hi = mid
+            right = mid
 
-    return list_of_integers[lo]
+    return list_of_integers[left]
