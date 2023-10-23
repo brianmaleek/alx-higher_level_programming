@@ -18,7 +18,7 @@ if (process.argv.length < 3) {
 
 // Get movie id and API url
 const movieId = process.argv[2];
-const apiUrl = `https://swapi-api.hbtn.io/api/films/${movieId}`;
+const apiUrl = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
 
 // Make request to API
 request(apiUrl, (err, res, body) => {
