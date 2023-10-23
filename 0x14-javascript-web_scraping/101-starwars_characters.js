@@ -25,9 +25,14 @@ request(apiUrl, (err, res, body) => {
   } else if (res.statusCode !== 200) {
     console.log('Invalid URL');
   } else {
-    const characters = JSON.parse(body).characters;
-    for (const character of characters) {
-      request(character, (err, res, body) => {
+    const movie = JSON.parse(body);
+    const characters = movie.characters;
+
+    function displayCharacterName (index) {
+      if (index >= characters.length) {
+        return;
+      }
+      request(characters[index], (err, res, body) => {
         if (err) {
           console.log(err);
         } else if (res.statusCode !== 200) {
@@ -35,7 +40,10 @@ request(apiUrl, (err, res, body) => {
         } else {
           console.log(JSON.parse(body).name);
         }
+        displayCharacterName(index + 1);
       });
     }
+    // display character name
+    displayCharacterName(0);
   }
 });
